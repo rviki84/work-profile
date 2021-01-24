@@ -1,0 +1,2 @@
+holterBPTimeSeriesFile,demographicsWeight,demographicsHeight,demographicsAge,demographicsIsFemale,lifestyleIsSmoker,lifestyleActivityStatus,cardiacUS_LVEjectionFraction,cardiacUS_LVEndDiastolicVolume,carotidUS_ICA_L_Diameter,carotidUS_ICA_R_Diameter,carotidUS_ICA_L_MinVelocity,carotidUS_ICA_R_MinVelocity,outputFolder
+s3://lobcder-vphshare-eu/tests/circadianBloodFlow/VL_DARE_151028M78MCI0016.csv,70,170,78,0,0,1,59.3,81.1,6.1,6.2,12,12,s3://lobcder-vphshare-eu/tests/circadianBloodFlow/out/

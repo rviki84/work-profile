@@ -1,0 +1,204 @@
+root@ip-10-102-30-85:/app/qsm_vph_recon# ./qsm_vph_recon --mffeinputdir /app/1001-WIP_mFFE_QSM_145sl_SENSE/resources/DICOM/files/ --t1inputdir /app/601-WIP_3D_T1_MPRAGE_SENSE/resources/DICOM/files/ --outputimage /tmp/results/susceptibility.nii.gz --meansusceptibilitytable /tmp/results/mean.csv
+/app/qsm_vph_recon/numpy/oldnumeric/__init__.py:11: ModuleDeprecationWarning: The oldnumeric module will be dr opped in Numpy 1.9
+/app/qsm_vph_recon/skimage/filter/__init__.py:6: skimage_deprecation: The `skimage.filter` module has been ren amed to `skimage.filters`.  This placeholder module will be removed in v0.13.
+Namespace(configfile='qsm_config.cfg', even=False, meansusceptibilitytable='/tmp/results/mean.csv', mffeinputd ir='/app/1001-WIP_mFFE_QSM_145sl_SENSE/resources/DICOM/files/', odd=False, outputimage='/tmp/results/susceptib ility.nii.gz', recon_tag='recon', t1inputdir='/app/601-WIP_3D_T1_MPRAGE_SENSE/resources/DICOM/files/', target_ directory=None, unipolar=False)
+Write results to target directory: /app/qsm_vph_recon/temp
+Assuming there is only one volume in DICOM directory.
+Loading Local Dictionary
+Loading DicomUtils Dictionary
+Loading Elscint Dictionary
+Loading Matlab Dictionary
+Processing: [##############################] (49 / 49) elapsed:  0.7s remaining:  0.0s DONE
+Analyzing: [##############################] (2030 / 2030) DONE
+Loading first echo at TE = 3.195 ms
+Loading echo at TE = 7.195 ms
+Loading echo at TE = 11.195 ms
+Loading echo at TE = 15.195 ms
+Loading echo at TE = 19.195 ms
+Loading echo at TE = 23.195 ms
+Loading echo at TE = 27.195 ms
+Analyzing: [##############################] (170 / 170) DONE
+rigid regging...
+starting RigidReg
+generating brainmask and subcortical segmentation...
+Start subcortical segmentation
+Start hemisphere segmentation
+Start tissue classification
+Create image warping
+Register priors
+Tissue classification
+Generating mask from hemispheres and expanding some subcortical structures to give more room.
+Perform fieldmapping...
+... with bipolar readout
+divide by zero encountered in divide
+invalid value encountered in divide
+divide by zero encountered in divide
+invalid value encountered in divide
+mapping even echoes...
+invalid value encountered in sqrt
+mapping odd echoes
+Automatic cropping based on mask...
+Parsing config file
+fftw is not used, so no wisdom loaded.
+Removing background field...
+Starting from wrapped field.
+it seems the fieldmap is in kHz, we rescale to Hz
+Returning finite difference operator without noise-reduction
+Returning finite difference operator without noise-reduction
+Returning finite difference operator without noise-reduction
+Bandwidth: 125.000000 and 62.500000
+Array dimensions: 240x294x144
+Kernel dimensions 3x3x3
+Returning finite difference operator without noise-reduction
+Bandwidth: 125.000000 and 62.500000
+Array dimensions: 240x294x144
+Kernel dimensions 5x5x3
+invalid value encountered in divide
+divide by zero encountered in divide
+invalid value encountered in divide
+background-field-removal time: 18.02
+Reconstructing susceptibility...
+0
+[288, 1, 1]
+1
+[1, 352, 1]
+2
+[1, 1, 172]
+[[[ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[-0.     -0.     -0.    ]
+  [-0.     -0.     -0.    ]
+  [-0.     -0.8348 -0.    ]
+  [-0.     -0.     -0.    ]
+  [-0.     -0.     -0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.8348  0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]]
+0
+[288, 1, 1]
+1
+[1, 352, 1]
+2
+[1, 1, 172]
+[[[ 0.      0.      0.    ]
+  [-0.     -0.     -0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [-0.     -0.     -0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [-0.     -0.8348 -0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.8348  0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [-0.     -0.     -0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]
+
+ [[ 0.      0.      0.    ]
+  [-0.     -0.     -0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]
+  [ 0.      0.      0.    ]]]
+0
+[288, 1, 1]
+1
+[1, 352, 1]
+2
+[1, 1, 172]
+Returning finite difference operator without noise-reduction
+[[[ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]]
+
+ [[ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]]
+
+ [[ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -1.  1.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]]
+
+ [[ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]]
+
+ [[ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]
+  [ 0. -0.  0.]]]
+Casting complex values to real discards the imaginary part
+Starting conjugate gradient...
+maxeval = 20
+reltol = 0.0001
+divide by zero encountered in divide
+initial residual: 79051.0003675
+step | norm(res)  | rel.chg.   | rms_dx_dat | rms_dx_tar | max_dx_dat | max_dx_tar
+--------------------------------------------------------------------------------
+  1 |  2.662e+04 |     0.6632 | 0.01277715 | 0.00869568 |   0.282633 |   0.235682
+  2 |  1.308e+04 |     0.5088 | 0.01133909 | 0.00901527 |   0.249151 |   0.208351
+  3 |  8.251e+03 |      0.369 | 0.00756051 | 0.00665062 |   0.188531 |   0.173034
+  4 |  6.049e+03 |      0.267 | 0.00711003 | 0.00685180 |   0.186226 |   0.163917
+  5 |  4.937e+03 |     0.1838 | 0.00616055 | 0.00597580 |   0.161603 |   0.133952
+  6 |  4.003e+03 |     0.1892 | 0.00434657 | 0.00391417 |   0.133830 |   0.107796
+  7 |  3.258e+03 |      0.186 | 0.00311896 | 0.00260699 |   0.107407 |   0.074532
+  8 |  2.808e+03 |     0.1382 | 0.00264015 | 0.00224849 |   0.092739 |   0.052138
+  9 |  2.392e+03 |     0.1481 | 0.00234473 | 0.00196799 |   0.089407 |   0.042461
+ 10 |  2.047e+03 |     0.1443 | 0.00200422 | 0.00176328 |   0.088749 |   0.040399
+ 11 |  1.818e+03 |     0.1118 | 0.00172275 | 0.00151658 |   0.081960 |   0.034617
+ 12 |  1.615e+03 |     0.1116 | 0.00148099 | 0.00129824 |   0.078350 |   0.034172
+ 13 |  1.443e+03 |     0.1063 | 0.00131427 | 0.00118609 |   0.076638 |   0.032098
+ 14 |   1.32e+03 |    0.08537 | 0.00121505 | 0.00109383 |   0.079862 |   0.030205
+ 15 |  1.205e+03 |    0.08757 | 0.00103807 | 0.00091925 |   0.082924 |   0.028740
+Exit CG: change of susci within target mask smaller than 0.1 of initial change
+ 16 |  1.101e+03 |    0.08556 | 0.00090413 | 0.00079834 |   0.084130 |   0.026528
+divide by zero encountered in divide
+invalid value encountered in divide
+total dipole inversion time for all dpi_regpar and modulation_threshold combinations: 1097.51
+/app/qsm_vph_recon/temp/2016-03-18
+/app/qsm_vph_recon/temp/2016-03-18/recon
+Parsing config file
+fftw is not used, so no wisdom loaded.
+/app/qsm_vph_recon/temp/2016-03-18/recon/dpi_regpar_0.01
+Parsing config file
+fftw is not used, so no wisdom loaded.
+[Errno 2] No such file or directory: '/app/qsm_vph_recon/temp/2016-03-18/recon/dpi_regpar_0.01/dpi_diff_field.df'
+Reached rootpath: /app/qsm_vph_recon/temp/2016-03-18
+Reached rootpath: /app/qsm_vph_recon/temp/2016-03-18

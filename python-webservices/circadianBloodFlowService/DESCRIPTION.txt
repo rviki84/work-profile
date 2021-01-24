@@ -1,0 +1,28 @@
+Input parameters:
+
+HolterBP_TimeSeriesFile                 Path to CSV file produced by the Holter BP processing tool containing 24h BP measurements
+Demographics_Weight                     Weight in kg
+Demographics_Height                     Height in cm
+Demographics_Age                        Age in years
+Demographics_IsFemale                   1 = female, 0 = not female
+Lifestyle_IsSmoker                      1 = currently smoking, 0 = currently not smoking
+Lifestyle_ActivityStatus                "Leisure time excercise duration" 1-2 = Sedentary, 3-4 = Actice, 5 = Endurance trained
+CardiacUS_LVEjectionFraction            Left ventricle ejection fraction (A4C) in %
+CardiacUS_LVEndDiastolicVolume          Left ventricle end-diastolic volume (A4C) in ml
+CarotidUS_ICA_L_Diameter                Internal carotid artery diameter (left) in mm
+CarotidUS_ICA_R_Diameter                Internal carotid artery diameter (right) in mm
+CarotidUS_ICA_L_MinVelocity             Internal carotid artery minimum flow velocity (left) in cm/s
+CarotidUS_ICA_R_MinVelocity             Internal carotid artery minimum flow velocity (right) in cm/s
+OutputFolder                            (optional) Path to folder where output is produced
+
+Control case:
+
+CircadianBloodflow('C:\Users\Toni\Desktop\temp\VL_DARE_150923M52CTR0002.csv', 115, 195, 52, 0, 1, 1, 47.2, 119.3, 4.8, 5.0, 15, 18)
+
+MCI case:
+
+CircadianBloodflow('C:\Users\Toni\Desktop\temp\VL_DARE_151028M78MCI0016.csv', 70, 170, 78, 0, 0, 1, 59.3, 81.1, 6.1, 6.2, 12, 12)
+
+The program writes nine files in the OutputFolder: VL_DARE_xxxxxxxxxxxxxxxx_cardiacOutput.csv, containing the 24h predictions of 
+cardiac output, systemic blood pressure, and cerebral blood flow waveforms (MCA-L and MCA-R separately), and eight encapsulated 
+PostScript summarising the model outputs.

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<plugin name="PatientInfo" caption="PatientInfo">
+    <depends>
+		<plugin name="DICOMPlugin" />
+    </depends>
+</plugin>

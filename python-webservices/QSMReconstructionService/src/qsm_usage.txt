@@ -1,0 +1,41 @@
+root@ip-10-122-20-9:/app/qsm_vph_recon# ./qsm_vph_recon -h
+/app/qsm_vph_recon/numpy/oldnumeric/__init__.py:11: ModuleDeprecationWarning: The oldnumeric module will be dropped in Numpy 1.9
+/app/qsm_vph_recon/skimage/filter/__init__.py:6: skimage_deprecation: The `skimage.filter` module has been renamed to `skimage.filters`.  This placeholder module will be removed in v0.13.
+usage: qsm [-h] --mffeinputdir MFFEINPUTDIR --t1inputdir T1INPUTDIR [-u]
+           [-e | -o] --outputimage OUTPUTIMAGE [-t TARGET_DIRECTORY]
+           [-r RECON_TAG] [-c CONFIGFILE] --meansusceptibilitytable
+           MEANSUSCEPTIBILITYTABLE
+
+Perform quantitative susceptibility mapping (QSM) based on DICOM data of a
+multi-echo, gradient-echo scan (magnitude and phase) and a T1-weighted,
+magnetization-prepared scan.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --mffeinputdir MFFEINPUTDIR
+                        filename of xml file, directory of DICOM data. If
+                        supplying directory with DICOM data there must only be
+                        data from a single Series
+  --t1inputdir T1INPUTDIR
+                        filename of xml file, directory of DICOM data. If
+                        supplying directory with DICOM data there must only be
+                        data from a single Series
+  -u, --unipolar        perform fieldmapping assuming unipolar readout
+  -e, --even            perform fieldmapping with even echoes 0, 2,... only
+  -o, --odd             perform fieldmapping with odd echoes 1, 3,... only
+  --outputimage OUTPUTIMAGE
+                        Provide path to output image, which will contain
+                        susceptibility.
+  -t TARGET_DIRECTORY, --target_directory TARGET_DIRECTORY
+                        Provide alternative directory where loaded data is
+                        written to. Default generates "temp" in working
+                        directory.
+  -r RECON_TAG, --recon_tag RECON_TAG
+                        name of sub-directory where all data generated from
+                        background-field-removal and dipole inversion are
+                        written.
+  -c CONFIGFILE, --configfile CONFIGFILE
+                        filename of config file
+  --meansusceptibilitytable MEANSUSCEPTIBILITYTABLE
+                        Provide path to output table containing mean
+                        susceptibility per brain region.
